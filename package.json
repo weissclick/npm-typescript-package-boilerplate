@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p tsconfig.json",
     "build": "tsc"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/93v/npm-typescript-package-boilerplate#readme",
   "devDependencies": {
+    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   }
 }
