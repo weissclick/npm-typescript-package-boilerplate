@@ -1,4 +1,6 @@
 language: generic
+install:
+  - npm install
 cache:
   directories:
     - node_modules
