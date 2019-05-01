@@ -62,3 +62,5 @@ typings/
 
 # npm build output
 /dist
+
+.sonarlint/
