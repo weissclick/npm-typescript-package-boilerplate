@@ -61,4 +61,4 @@ typings/
 .next
 
 # npm build output
-/lib
+/dist

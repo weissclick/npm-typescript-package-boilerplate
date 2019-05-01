@@ -2,8 +2,8 @@
   "name": "npm-typescript-package-boilerplate",
   "version": "0.0.3",
   "description": "A boilerplate repo for publishing typescript packages to npm",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
@@ -39,6 +39,6 @@
     "typescript": "^3.4.5"
   },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ]
 }
