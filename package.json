@@ -2,18 +2,30 @@
   "name": "npm-typescript-package-boilerplate",
   "version": "1.0.0",
   "description": "A boilerplate repo for publishing typescript packages to npm",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/93v/npm-typescript-package-boilerplate.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Hello",
+    "Greeter"
+  ],
+  "author": {
+    "name": "93v",
+    "email": "93v@protonmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/93v/npm-typescript-package-boilerplate/issues"
