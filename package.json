@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
-    "test": "jest --config jestconfig.json",
+    "test": "jest",
     "build": "tsc",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
