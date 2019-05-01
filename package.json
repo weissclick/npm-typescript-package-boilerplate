@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/93v/npm-typescript-package-boilerplate#readme",
   "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
