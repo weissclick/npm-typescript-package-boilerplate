@@ -4,8 +4,8 @@
   "description": "A boilerplate repo for publishing typescript packages to npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
     "build": "tsc"
   },
   "repository": {
