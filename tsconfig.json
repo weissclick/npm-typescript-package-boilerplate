@@ -20,7 +20,7 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "rootDirs": ["./", "./src"],
-    "typeRoots": ["./types", "node_modules/@types"],
+    "typeRoots": ["./types", "./@types", "node_modules/@types"],
     "types": ["node", "jest"],
     "esModuleInterop": true,
     "preserveConstEnums": true,
