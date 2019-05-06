@@ -15,7 +15,7 @@
     "preversion": "npm run lint",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
-    "start": "nodemon"
+    "start": "npm link && nodemon"
   },
   "repository": {
     "type": "git",
