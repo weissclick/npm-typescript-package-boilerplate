@@ -25,7 +25,8 @@
     "esModuleInterop": true,
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*", "coverage"]
