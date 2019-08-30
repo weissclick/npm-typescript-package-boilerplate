@@ -12,7 +12,7 @@ jobs:
     # runs-on: ubuntu-latest
     strategy:
       matrix:
-        #     node_version: [8, 10, 12]
+        node_version: [8, 10, 12]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
@@ -20,8 +20,8 @@ jobs:
       # - name: Use Node.js ${{ matrix.node_version }}
       - uses: actions/setup-node@v1
         with:
-          # version: ${{ matrix.node_version }}
-          version: 12
+          version: ${{ matrix.node_version }}
+          # version: 12
       - run: npm ci
       - run: npm test
   # publish-npm:
