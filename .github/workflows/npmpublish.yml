@@ -7,21 +7,21 @@ on:
 
 jobs:
   build:
-    # name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    # runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [8, 10, 12]
+        node_version: [10, 12]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
+      - name: Use Node.js ${{ matrix.node_version }}
       - uses: actions/checkout@v1
-      # - name: Use Node.js ${{ matrix.node_version }}
+        with:
+          fetch-depth: 1
       - uses: actions/setup-node@v1
         with:
           version: ${{ matrix.node_version }}
-          # version: 12
       - run: npm ci
       - run: npm test
   # publish-npm:
