@@ -1,7 +1,11 @@
 name: Node.js Package
 
 on:
-  push: [branches, tags]
+  push:
+    branches:
+      - "*"
+    tags:
+      - "*"
 
 jobs:
   build:
