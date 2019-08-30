@@ -16,6 +16,7 @@ jobs:
         with:
           version: 12
       - run: npm ci
+      - run: npm lint
       - run: npm test
 
   publish-npm:
@@ -30,7 +31,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npx semantic-release
+      - run: npm run semantic-release
         env:
           GH_TOKEN: ${{secrets.GH_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -47,7 +48,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npx semantic-release
+      - run: npm run semantic-release
         env:
           GH_TOKEN: ${{secrets.GH_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
