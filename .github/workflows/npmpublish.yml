@@ -6,7 +6,7 @@ on:
       - "master"
 
 jobs:
-  build:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -18,9 +18,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
-      - run: npm run build
 
-  publish-npm:
+  build-and-publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -32,12 +31,13 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run build
       - run: npm run semantic-release
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GH_TOKEN: ${{secrets.GH_TOKEN}}
-  publish-gpr:
+  build-and-publish-gpr:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -49,6 +49,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+      - run: npm run build
       - run: npm run semantic-release
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
