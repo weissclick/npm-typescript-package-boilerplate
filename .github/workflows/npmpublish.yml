@@ -31,11 +31,11 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: echo $NPM_TOKEN
       - run: npm run semantic-release
         env:
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          CI: true
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
@@ -50,6 +50,5 @@ jobs:
       - run: npm ci
       - run: npm run semantic-release
         env:
-          GH_TOKEN: ${{secrets.GH_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          CI: true
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
