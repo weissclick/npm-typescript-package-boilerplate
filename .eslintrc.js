@@ -1,11 +1,12 @@
 module.exports = {
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "prettier"],
+  plugins: ["prettier"],
   parserOptions: { ecmaVersion: 2018 },
   env: { browser: true, node: true, es6: true },
   globals: { module: true, process: true, require: true },
   rules: {
     eqeqeq: ["error", "allow-null"],
-    indent: ["error", 2],
+    indent: ["error", 2, { MemberExpression: 2 }],
     "linebreak-style": ["error", "unix"],
     "max-len": ["error", 80],
     "no-alert": "off",
@@ -15,10 +16,6 @@ module.exports = {
     "no-undef": "error",
     "no-unused-vars": "warn",
     semi: ["error", "always"],
-    "space-before-function-paren": [
-      "error",
-      { anonymous: "always", named: "never" },
-    ],
     strict: ["error", "safe"],
     "comma-dangle": ["error", "always-multiline"],
     "new-cap": ["error", { capIsNew: false }],
