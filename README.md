@@ -1,5 +1,6 @@
 # npm-typescript-package-boilerplate
 
+![David](https://img.shields.io/david/93v/npm-typescript-package-boilerplate.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/93v/npm-typescript-package-boilerplate.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/93v/npm-typescript-package-boilerplate.svg)
 ![npm](https://img.shields.io/npm/dw/npm-typescript-package-boilerplate.svg)
